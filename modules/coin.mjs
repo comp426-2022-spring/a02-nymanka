@@ -38,7 +38,7 @@ function coinFlip() {
  */
 
 function coinFlips(flips) {
-  coin = [];
+  const coin = [];
 
   for(let i = 0; i < flips; i++){
     Math.random() > 0.5 ? coin.push("heads") : coin.push("tails");
@@ -61,8 +61,8 @@ function coinFlips(flips) {
  */
 
 function countFlips(array) {
-  const heads = 0;
-  const tails = 0;
+  var heads = 0;
+  var tails = 0;
   for(let i = 0; i < array.length; i++){
     if(array[i] == 'heads'){
       heads++;
@@ -92,12 +92,16 @@ function countFlips(array) {
  */
 
 function flipACoin(call) {
-  const flip = coinFlip();
-  const result = "lose";
-  if(call == flip){
-    result = "win";
+  if (call != "heads" & call != "tails" | call == null) {
+    console.log("Error: no input.")
+    console.log("Usage: node guess-flip --call=[heads|tails]")
+  }else{
+    const flip = coinFlip();
+    var result = "lose";
+    if(call == flip){
+      result = "win";
   }
-  count = new Map();
+  const count = new Map();
 
   count.set("call", call);
   count.set("flip", flip);
@@ -105,6 +109,8 @@ function flipACoin(call) {
  
   return count;
 
+  }
+  
 }
 
 export { coinFlip, coinFlips, countFlips, flipACoin }
