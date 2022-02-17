@@ -76,7 +76,7 @@ function countFlips(array) {
   count.set("tails", tails);
   count.set("heads", heads);
   
-  return count;
+  return "{ tails: " + count.get("tails") + ", heads: " + count.get("heads") + " }";
 
 }
 
@@ -107,7 +107,7 @@ function flipACoin(call) {
   count.set("flip", flip);
   count.set("result", result);
  
-  return count;
+  return "{ call: " + count.get("call") + ", flip: " + count.get("flip") + ", result: " + count.get("result") + " }";
 
   }
   
