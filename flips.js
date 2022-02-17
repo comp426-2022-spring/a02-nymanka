@@ -5,8 +5,7 @@ const args = minimist(process.argv.slice(2))
 args["number"]
 const flips = args.number
 
-const flip_array = [];
-flip_array = coinFlips(flips)
+const flip_array = coinFlips(flips)
 
 if (flips == null) {
     flip_array[i] = coinFlip();
