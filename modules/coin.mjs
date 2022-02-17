@@ -71,8 +71,12 @@ function countFlips(array) {
       tails++
     }
   }
+  count = new Map()
 
+  count.set("tails", tails)
+  count.set("heads", heads)
   
+  return count
 
 }
 
@@ -88,10 +92,22 @@ function countFlips(array) {
  */
 
 function flipACoin(call) {
+  flip = coinFlip()
+  result = "lose"
+  if(call == flip){
+    result = "win"
+  }
+  count = new Map()
+
+  count.set("call", call)
+  count.set("flip", flip)
+  count.set("result", result)
+ 
+  return count
 
 }
 
-
+export { coinFlip, coinFlips, countFlips, flipACoin }
 /** Export 
  * 
  * Export all of your named functions
