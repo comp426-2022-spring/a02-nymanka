@@ -61,8 +61,8 @@ function coinFlips(flips) {
  */
 
 function countFlips(array) {
-  heads = 0
-  tails = 0
+  const heads = 0
+  const tails = 0
   for(let i = 0; i < array.length; i++){
     if(array[i] == 'heads'){
       heads++
@@ -71,7 +71,7 @@ function countFlips(array) {
       tails++
     }
   }
-  count = new Map()
+  const count = new Map()
 
   count.set("tails", tails)
   count.set("heads", heads)
@@ -92,8 +92,8 @@ function countFlips(array) {
  */
 
 function flipACoin(call) {
-  flip = coinFlip()
-  result = "lose"
+  const flip = coinFlip()
+  const result = "lose"
   if(call == flip){
     result = "win"
   }
