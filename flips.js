@@ -8,8 +8,8 @@ const flips = args.number
 const flip_array = coinFlips(flips)
 
 if (flips == null) {
-    flip_array[i] = coinFlip();
-    if (flip_array[i] == "heads") {
+    var i = coinFlip();
+    if (i == "heads") {
         console.log("{ heads: 1 }")
     } else {
         console.log("{ tails: 1 }")
