@@ -7,4 +7,4 @@ args["call"]
 guess = args.call
 info = flipACoin(guess)
 
-console.log(info)
+console.log("{ call: " + info.get("call") + ", flip: " + info.get("flip") + ", result: " + info.get("result") + " }")

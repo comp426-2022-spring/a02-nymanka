@@ -10,4 +10,4 @@ results = coinFlips(flips)
 info = countFlips(results)
 
 console.log(results)
-console.log(info)
+console.log("{ tails: " + info.get("tails") + ", heads: " + info.get("heads") + " }")
