@@ -1,22 +1,10 @@
-import {coinFlip, coinFlips, countFlips, flipACoin} from "./modules/coin.mjs"
-import minimist from "minimist";
-
-const args = minimist(process.argv.slice(2))
-args["number"]
-const flips = args.number
-
-const flip_array = coinFlips(flips)
-
-if (flips == null) {
-    var i = coinFlip();
-    if (i == "heads") {
-        console.log("{ heads: 1 }")
-    } else {
-        console.log("{ tails: 1 }")
-    }
-} else {
-    const map = countFlips(flip_array)
-
-    console.log(flip_array);
-    console.log(countFlips(flip_array))
-}
+import { coinFlip, coinFlips, countFlips } from "./modules/coin.mjs";
+let args=process.argv;
+let array=[];
+if(args.length ==2) {
+    array = coinFlips(1);
+    console.log(array);
+    console.log(countFlips(array));
+} else {array = coinFlips(args[2]);
+    console.log(array);
+    console.log(countFlips(array));}
